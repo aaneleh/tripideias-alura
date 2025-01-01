@@ -4,7 +4,7 @@ TripIdeias é uma empresa que fornece pacotes de viagem personalizados.
   
 O website foi construido em CSS e JS vanilas para mover o foco para a interface em si, com implementações de pesquisa entre os pacotes, salvar os favoritos e consultar um orçamento personalizado.
 
-![Wireframe das telas de início pesquisa e detalhes]("wireframe.png")
+![Wireframe das telas de início pesquisa e detalhes](wireframe.png)
 
 ### TODO
 - Página inicial
