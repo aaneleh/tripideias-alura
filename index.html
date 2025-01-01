@@ -17,7 +17,7 @@
     <title>TripIdeias</title>
   </head>
   <body>
-    <header>
+    <header class="maxWidth">
       <h1>
         <a href="/">TripIdeias</a>
       </h1>
@@ -76,29 +76,31 @@
     </header>
 
     <main>
-      <section class="hero">
-        <h2>Para onde será sua viagem?</h2>
-        <div class="input-group mb-3 hero-input">
-          <input
+      <section class="hero" id="hero">
+        <div class="hero-wrapper maxWidth">
+            <h2>Para onde será sua viagem?</h2>
+            <div class="input-group mb-3 hero-input">
+            <input
             type="text"
             class="form-control"
             placeholder="Seu destino"
             aria-label="Seu destino"
-          />
-          <button aria-label="enviar pesquisa" class="botao-pesquisar">
-            <i class="bi bi-search"></i>
-          </button>
+            />
+            <button aria-label="enviar pesquisa" class="botao-pesquisar">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="promocoes">
+      <section class="promocoes maxWidth">
         <h3>Promoções</h3>
         <div class="promocoes-wrapper">
           <div class="promocoes-card">
             <div class="img-container">
               <img src="/assets/Lis1.png" alt="" />
               <svg
-                class="bookmark-icon"
+                class="bookmark-icon salvo"
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
@@ -111,12 +113,14 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-              <span class="card-preco-promocao">R$ 500,00</span>
-              <span class="card-preco-normal">R$ 1000,00</span>
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
           <div class="promocoes-card">
             <div class="img-container">
@@ -135,16 +139,70 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-              <span class="card-preco-promocao">R$ 500,00</span>
-              <span class="card-preco-normal">R$ 1000,00</span>
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
           <div class="promocoes-card">
             <div class="img-container">
               <img src="/assets/Lis3.png" alt="" />
+              <svg
+                class="bookmark-icon salvo"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="promocoes-card">
+            <div class="img-container">
+              <img src="/assets/Lis1.png" alt="" />
+              <svg
+                class="bookmark-icon salvo"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="promocoes-card">
+            <div class="img-container">
+              <img src="/assets/Lis2.png" alt="" />
               <svg
                 class="bookmark-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -159,24 +217,52 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-              <span class="card-preco-promocao">R$ 500,00</span>
-              <span class="card-preco-normal">R$ 1000,00</span>
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="promocoes-card">
+            <div class="img-container">
+              <img src="/assets/Lis3.png" alt="" />
+              <svg
+                class="bookmark-icon salvo"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="promocoes-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">
+                <span class="card-preco-promocao">R$ 500,00</span>
+                <span class="card-preco-normal">R$ 1000,00</span>
+              </p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="populares">
+      <section class="populares maxWidth">
         <h3>Pacotes mais populares</h3>
         <div class="populares-wrapper">
           <div class="populares-card">
             <div class="img-container">
               <img src="/assets/Lis2.png" alt="" />
               <svg
-                class="bookmark-icon"
+                class="bookmark-icon salvo"
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
@@ -189,12 +275,11 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-                R$ 500,00
-
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
           <div class="populares-card">
             <div class="img-container">
@@ -213,12 +298,11 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-                R$ 500,00
-
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
           <div class="populares-card">
             <div class="img-container">
@@ -237,36 +321,111 @@
                 />
               </svg>
             </div>
-            <p class="card-titulo">Santo Antônio da Patrulha</p>
-            <p class="card-preco">
-                R$ 500,00
-            </p>
-            <a href="" class="botao card-botao">Ver Detalhes</a>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="populares-card">
+            <div class="img-container">
+              <img src="/assets/Lis2.png" alt="" />
+              <svg
+                class="bookmark-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="populares-card">
+            <div class="img-container">
+              <img src="/assets/Lis3.png" alt="" />
+              <svg
+                class="bookmark-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="populares-card">
+            <div class="img-container">
+              <img src="/assets/Lis1.png" alt="" />
+              <svg
+                class="bookmark-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                />
+              </svg>
+            </div>
+            <div class="populares-card-desc">
+              <p class="card-titulo">Santo Antônio da Patrulha</p>
+              <p class="card-preco">R$ 500,00</p>
+              <a href="" class="botao card-botao">Ver Detalhes</a>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="servicos">
-        <div class="servicos-intro">
+        <div class="servicos-intro maxWidth">
             <h3>Está planejando sua próxima viagem?</h3>
             <p>Pesquise agora nossos pacotes e confira abaixo os serviços garantidos para você.</p>
         </div>
-        <ul class="servicos-lista">
+        <ul class="servicos-lista maxWidth">
             <li class="servicos-item">
-                <p class="servicos-item-titulo">Todas as passagens na palma da sua mão</p>
-                <p class="servicos-item-descricao">Não se preocupe em planejar todo seu deslocamento, compramos todas as passagens necessária para sua viagem.</p>
+                <img src="/assets/fantasminha.png" alt="">
+                <div class="servicos-item-texto">  
+                  <p class="servicos-item-titulo">Todas as passagens na palma da sua mão</p>
+                  <p class="servicos-item-descricao">Não se preocupe em planejar todo seu deslocamento, compramos todas as passagens necessária para sua viagem.</p>
+                </div>
             </li>
             <li class="servicos-item">
-                <p class="servicos-item-titulo">Todas as passagens na palma da sua mão</p>
-                <p class="servicos-item-descricao">Não se preocupe em planejar todo seu deslocamento, compramos todas as passagens necessária para sua viagem.</p>
+                <img src="/assets/fantasminha.png" alt="">
+                <div class="servicos-item-texto">
+                  <p class="servicos-item-titulo">Todas as passagens na palma da sua mão</p>
+                  <p class="servicos-item-descricao">Não se preocupe em planejar todo seu deslocamento, compramos todas as passagens necessária para sua viagem.</p>
+                </div>
             </li>
         </ul>
       </section>
 
-      <section class="calltoaction">
+      <section class="calltoaction maxWidth">
         <h2>Encontre agora o pacote perfeito para você:</h2>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Para onde será sua viagem?" aria-label="Insira seu destino" aria-describedby="basic-addon1">
         </div>
         <button aria-label="enviar pesquisa" class="botao botao-pesquisar">
             Pesquisar
@@ -274,10 +433,12 @@
       </section>
 
       <footer>
-        <p>TripIdeias</p>
-        <a href="">        
+        <div class="footer-wrapper maxWidth">
+          <a href="/">TripIdeias</a>
+          <a href="">        
             <i class="bi bi-telephone-fill"></i>
-        </a>
+          </a>
+        </div>
       </footer>
 
       <button id="voltar-topo">Voltar ao topo <i class="bi bi-arrow-up"></i></button>
@@ -288,5 +449,32 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+
+
+    <script>
+
+      //SIDEBAR
+      const sidebar = document.getElementById('sidebar')
+      const botaoAbrirSidebar = document.getElementById('abrir-sidebar')
+      botaoAbrirSidebar.addEventListener('click', () => sidebar.classList.add('aberta')) //TODO enquanto aberta botar um event listener pra qualquer clique fora da sidebar fechar ela tb
+      const botaoFecharSidebar = document.getElementById('fechar-sidebar')
+      botaoFecharSidebar.addEventListener('click', () => sidebar.classList.remove('aberta'))
+
+      //BOTAO VOLTAR
+      const botaoVoltar = document.getElementById('voltar-topo')
+      botaoVoltar.addEventListener('click', () => document.getElementById("hero").scrollIntoView())
+      window.addEventListener('scroll', () => window.scrollY > 1500 ? botaoVoltar.classList.add('visivel') : botaoVoltar.classList.remove('visivel'))
+      /*versão decente/legível 
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 1500){
+          botaoVoltar.classList.add('visivel')
+        } else {
+          botaoVoltar.classList.remove('visivel')
+        }
+      })
+      */
+
+    </script>
   </body>
 </html>

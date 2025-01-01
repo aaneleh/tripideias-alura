@@ -1,8 +1,14 @@
 :root {
     --branco: #FAFAFA;
     --preto: #19191B; 
-    --amarelo: #FFD145;
+    --cinza: #999999;
+    --sombra: #ececec;
+    --amarelo: #FFD145; /*FFD145*/
     --amarelo-hover: hsl(45, 100%, 54%);
+    --bg-servicos: #F2E2C4;
+    --bg-botao-voltar: #999999; 
+    --bg-botao-voltar-hover: #8a8989; 
+    --borda-input-focus: #525252;
 }
 
 html{
@@ -27,8 +33,246 @@ img{
 a {
     color: currentColor;
     text-decoration: none;
+    transition: color 100ms;
 }
 body {
-    max-width: 900px;
+    background: var(--branco);
+    overflow-x: hidden;
+}
+.maxWidth {
+    max-width: 932px;
     margin: auto;
+    padding: 0 2rem;
+}
+section {
+    margin-bottom: 4rem;
+}
+main {
+    padding-top: 4rem;
+}
+
+/***************HEADER*****************/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem !important;
+    position: fixed;
+    min-width: 100vw;
+    background: var(--branco);
+    z-index: 100;
+}
+#sidebar {
+    position: fixed;
+    z-index: 10000;
+    top:0;
+    right: -100%;
+    height: 100vh;
+    width: 300px;
+    background: var(--branco);
+    box-shadow: -2px 0 4px var(--sombra);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 200ms ease;
+}
+#sidebar.aberta {
+    right: 0;
+    transition: right 200ms ease;
+
+}
+#fechar-sidebar{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+#abrir-sidebar{
+    font-size: 2rem;
+}
+button {
+    border: none;
+    background: none;
+    color: var(--preto);
+    font-size: 1.5rem;
+}
+
+/***************HERO*****************/
+.hero {
+    background-image: url('./assets/Lis2.png');
+    height: 390px;
+    background-attachment: fixed;
+}
+.hero-wrapper {
+    height: 100%;
+    max-width: 540px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.hero-input {
+    position: relative;
+}
+.hero-input input {
+    border-radius: 8px !important;
+}
+.hero-input input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+.hero-input .botao-pesquisar{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+/**********LISTAGEM CARDS********/
+.promocoes-wrapper, .populares-wrapper {
+    margin: 2rem 0;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+}
+.populares-wrapper{
+    flex-wrap: wrap;
+}
+.promocoes-card, .populares-card{
+    width: 180px;
+    background: var(--branco);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: background 200ms;
+}
+.promocoes-card {
+    min-width: 240px;
+}
+.promocoes-card:hover, .populares-card:hover{
+    background: var(--sombra);
+}
+.promocoes-card-desc, .populares-card-desc {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.promocoes-card-desc .card-botao, .populares-card-desc .card-botao {
+    align-self: center;
+}
+
+.card-preco {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+.card-preco-normal {
+    color: var(--cinza);
+    text-decoration: line-through;
+    font-size: 0.75rem;
+}
+.img-container {
+    position: relative;
+}
+.bookmark-icon {
+    position: absolute;
+    right: 1rem;
+    transform: scale(1.1);
+    overflow: visible;
+    stroke: var(--preto);
+    stroke-width: 2px;
+    fill: var(--preto);
+    fill-opacity: 0;
+    transition: fill-opacity 100ms;
+}
+.bookmark-icon:hover {
+    fill-opacity: 0.5;
+}
+.bookmark-icon.salvo {
+    fill: var(--preto);
+    fill-opacity: 1;
+}
+
+/***SERVIÇOS***/
+.servicos{
+    background: var(--bg-servicos);
+    padding: 2rem 0;
+    margin-bottom: 0;
+}
+.servicos-intro {
+    display: grid;
+    row-gap: 1rem;
+}
+.servicos-lista {
+    padding: 2rem;
+    display: grid;
+    row-gap: 1rem;
+    list-style: none;
+}
+.servicos-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.servicos-item {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.servicos-item-titulo {
+    font-weight: 600;
+    font-size: 1.12rem;
+}
+
+/***CALLTOACTION***/
+.calltoaction {
+    display: grid;
+    row-gap: 2rem;
+    max-width: 540px;
+    padding: 4rem 2rem;
+}
+.calltoaction .botao-pesquisar {
+    justify-self: center;
+    font-size: 1.12rem;
+}
+.calltoaction input {
+    border-radius: 8px !important;
+}
+.calltoaction input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+
+/*FOOTER*/
+footer {
+    background: var(--preto);
+    color: var(--branco);
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.footer-wrapper a:hover{
+    color: var(--cinza);
+}
+
+/**BOTAO VOLTAR*/
+#voltar-topo {
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    z-index: 10;
+    font-size: 1rem;
+    background: var(--bg-botao-voltar);
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    opacity: 0;
+    transition: all 200ms;
+}
+#voltar-topo:hover{
+    background: var(--bg-botao-voltar-hover);
+}
+#voltar-topo.visivel {
+    opacity: 1;
+    bottom: 6rem;
 }
