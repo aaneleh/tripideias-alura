@@ -8,16 +8,16 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
 
 ### TODO
 - Página inicial
-    - ✅ Estrutura
-    - ✅ Estilização
+    - ✅ Estrutura e Estilização
     - ✅ Interações
     - Links e estilo sidebar 
-    - Exibir "dinâmicamente" pacotes
+    - ✅ Exibir "dinâmicamente" pacotes
     - Funcionalidade salvar pacotes
 
 - Página de pesquisa
-    - Estrutura
-    - Pesquisa dinâmica dos pacotes 
+    - Estrutura e Estilização
+    - Inputs de pesquisa redirecionar corretamente
+    - ✅ Resultado dinâmico dos pacotes 
 
 - Página de detalhes do pacote
-    - Estrutura 
+    - Estrutura e Estilização
