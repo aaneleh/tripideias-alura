@@ -5,7 +5,7 @@
     --sombra: #ececec;
     --amarelo: #FFD145; /*FFD145*/
     --amarelo-hover: hsl(45, 100%, 54%);
-    --bg-servicos: #F2E2C4;
+    --bg-servicos: #f3d886;
     --bg-botao-voltar: #999999; 
     --bg-botao-voltar-hover: #8a8989; 
     --borda-input-focus: #525252;
@@ -98,6 +98,8 @@ button {
 /***************HERO*****************/
 .hero {
     background-image: url('./assets/Lis2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 390px;
     background-attachment: fixed;
 }
@@ -135,27 +137,32 @@ button {
 .populares-wrapper{
     flex-wrap: wrap;
 }
-.promocoes-card, .populares-card{
+.pacote-card{
     width: 180px;
     background: var(--branco);
     padding: 1rem;
     border-radius: 0.5rem;
     transition: background 200ms;
 }
-.promocoes-card {
+.promocoes-wrapper .pacote-card {
     min-width: 240px;
 }
-.promocoes-card:hover, .populares-card:hover{
+.pacote-card:hover{
     background: var(--sombra);
 }
-.promocoes-card-desc, .populares-card-desc {
+.pacote-card-desc {
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
 }
-.promocoes-card-desc .card-botao, .populares-card-desc .card-botao {
+.pacote-card-desc .card-botao {
     align-self: center;
 }
+.pacote-card .card-titulo {
+    height: 3rem;
+    overflow: hidden; /*TODO testar/arrumar text truncate*/
+}
+
 
 .card-preco {
     display: flex;
@@ -180,6 +187,7 @@ button {
     fill: var(--preto);
     fill-opacity: 0;
     transition: fill-opacity 100ms;
+    cursor: pointer;
 }
 .bookmark-icon:hover {
     fill-opacity: 0.5;
