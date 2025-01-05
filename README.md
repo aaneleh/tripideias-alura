@@ -10,14 +10,15 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
 - Página inicial
     - ✅ Estrutura e Estilização
     - ✅ Interações
-    - Links e estilo sidebar 
     - ✅ Exibir "dinâmicamente" pacotes
+    - Links e estilo sidebar 
     - Funcionalidade salvar pacotes
 
-- Página de pesquisa
-    - Estrutura e Estilização
-    - Inputs de pesquisa redirecionar corretamente
+- ✅ Página de pesquisa
+    - ✅ Estrutura e Estilização
+    - ✅ Inputs de pesquisa redirecionar corretamente
     - ✅ Resultado dinâmico dos pacotes 
 
 - Página de detalhes do pacote
     - Estrutura e Estilização
+    - Conteúdo dinâmico por ID

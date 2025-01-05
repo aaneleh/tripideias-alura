@@ -1,8 +1,21 @@
+
+//INPUTS DE BUSCA HERO E CALLTOACTION
+const inputHero = document.getElementById('input-pesquisar-hero')
+inputHero.addEventListener('keypress', (e) => enterInput(e, inputHero.value))
+
+const botaoHero = document.getElementById('botao-pesquisar-hero')
+botaoHero.addEventListener('click', () => buscar(inputHero.value))
+
+const inputCall = document.getElementById('input-pesquisar-calltoaction')
+inputCall.addEventListener('keypress', (e) => enterInput(e, inputCall.value))
+
+const botaoCall = document.getElementById('botao-pesquisar-calltoaction')
+botaoCall.addEventListener('click', () => buscar(inputCall.value))
+
 //BOTAO VOLTAR PRO TOPO DA PÁGINA
 const botaoVoltar = document.getElementById('voltar-topo')
 botaoVoltar.addEventListener('click', () => document.getElementById("hero").scrollIntoView())
 window.addEventListener('scroll', () => window.scrollY > 1500 ? botaoVoltar.classList.add('visivel') : botaoVoltar.classList.remove('visivel'))
-
 
 //FETCH JSON E ADICIONA CARDS PACOTES NA PAGINA INICIAL
 window.onload = function carregarPacotes() {

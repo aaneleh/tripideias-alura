@@ -80,16 +80,17 @@
         <div class="hero-wrapper maxWidth">
             <h2>Para onde será sua viagem?</h2>
             <div class="input-group mb-3 hero-input">
-            <input
-            type="text"
-            class="form-control"
-            placeholder="Seu destino"
-            aria-label="Seu destino"
-            />
-            <button aria-label="enviar pesquisa" class="botao-pesquisar">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="Seu destino"
+              aria-label="Seu destino"
+              id="input-pesquisar-hero"
+              />
+              <button aria-label="enviar pesquisa" class="botao-pesquisar" id="botao-pesquisar-hero">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
         </div>
       </section>
 
@@ -133,9 +134,9 @@
       <section class="calltoaction maxWidth">
         <h2>Encontre agora o pacote perfeito para você:</h2>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Para onde será sua viagem?" aria-label="Insira seu destino" aria-describedby="basic-addon1">
+            <input type="text" id="input-pesquisar-calltoaction" class="form-control" placeholder="Para onde será sua viagem?" aria-label="Insira seu destino" aria-describedby="basic-addon1">
         </div>
-        <button aria-label="enviar pesquisa" class="botao botao-pesquisar">
+        <button aria-label="enviar pesquisa" class="botao botao-pesquisar" id="botao-pesquisar-calltoaction">
             Pesquisar
         </button>
       </section>
@@ -153,8 +154,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./scripts/sidebar.js"></script>
-    <script src="./scripts/render.js"></script>
+    <script src="./scripts/scripts.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
