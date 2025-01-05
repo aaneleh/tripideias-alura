@@ -98,13 +98,35 @@
     </header>
 
     <main>
-        <section id="resultados">
+        <section class="breadcrumb maxWidth">
+          <a href="javascript:history.back()">
+            <i class="bi bi-arrow-left-short"></i>
+          </a>
+          <p>Vendo agora: <span id="busca-atual"></span></p>
+        </section>
+        <section class="nova-pesquisa maxWidth">
+          <div class="input-group mb-3 pesquisa-input">
+            <input
+            id="input-pesquisar-nova-pesquisa"
+            type="text"
+            class="form-control"
+            placeholder="Buscar agora"
+            aria-label="busque um pacote"
+            />
+            <button aria-label="filtrar busca" class="botao-filtro">
+              <i class="bi bi-funnel"></i>
+            </button>
+            <button aria-label="fazer nova busca" class="botao-filtro" id="botao-pesquisar-nova-pesquisa">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </section>
+        <section id="resultados" class="maxWidth">
 
         </section>
     </main>
 
-    <script src="../scripts/sidebar.js"></script>
-    <script src="../scripts/render.js"></script>
-    <script src="../scripts/search.js"></script>
+    <script src="../scripts/scripts.js"></script>
+    <script src="../scripts/busca.js"></script>
   </body>
 </html>
