@@ -1,0 +1,153 @@
+/***PAGINA INCIIAL***/
+/*HERO*/
+.hero {
+    background-image: url('../assets/Lis2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 390px;
+    background-attachment: fixed;
+}
+.hero-wrapper {
+    height: 100%;
+    max-width: 540px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.hero-input {
+    position: relative;
+}
+.hero-input input {
+    border-radius: 8px !important;
+}
+.hero-input input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+.hero-input .botao-pesquisar{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+/***SERVIÇOS***/
+.servicos{
+    background: var(--bg-servicos);
+    padding: 2rem 0;
+    margin-bottom: 0;
+}
+.servicos-intro {
+    display: grid;
+    row-gap: 1rem;
+}
+.servicos-lista {
+    padding: 2rem;
+    display: grid;
+    row-gap: 1rem;
+    list-style: none;
+}
+.servicos-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.servicos-item {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.servicos-item-titulo {
+    font-weight: 600;
+    font-size: 1.12rem;
+}
+
+/***CALLTOACTION***/
+.calltoaction {
+    display: grid;
+    row-gap: 2rem;
+    max-width: 540px;
+    padding: 4rem 2rem;
+}
+.calltoaction .botao-pesquisar {
+    justify-self: center;
+    font-size: 1.12rem;
+}
+.calltoaction input {
+    border-radius: 8px !important;
+}
+.calltoaction input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+
+
+/*PAGINA DE DETALHES*/ 
+.detalhes {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.detalhes-hotel {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.detalhes-hotel img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.detalhes-form {
+    margin: 1rem 0;
+}
+.detalhes-form input, .detalhes-form select {
+    border-radius: 8px !important;
+}
+.detalhes-form input:focus, .detalhes-form select:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+#botao-form-detalhes{
+    align-self: center;
+}
+
+
+/**PAGINA DE BUSCA**/
+.busca {
+    min-height: 93.9vh;
+}
+.breadcrumb {
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.breadcrumb a{
+    font-size: 1.5rem;
+}
+.breadcrumb p {
+    margin-bottom: 0;
+}
+.breadcrumb span {
+    font-weight: bold;
+}
+.pesquisa-input input {
+    border-radius: 8px !important;
+}
+.pesquisa-input input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+#resultados {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#resultados .pacote-card {
+    min-width: 240px;
+}

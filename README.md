@@ -11,15 +11,19 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
     - ✅ Estrutura e Estilização
     - ✅ Interações
     - ✅ Exibir "dinâmicamente" pacotes
-    - Links e estilo sidebar 
-    - ❓ Funcionalidade salvar pacotes 
+    - ✅ Links e estilo sidebar 
+    - Funcionalidade salvar pacotes (lista IDs no localStorage)
 
 - ✅ Página de pesquisa
     - ✅ Estrutura e Estilização
     - ✅ Inputs de pesquisa redirecionar corretamente
     - ✅ Resultado dinâmico dos pacotes 
+    - Filtros de pesquisa (em promoção, salvos)
 
 - Página de detalhes do pacote
-    - Estrutura e Estilização
+    - ✅ Estrutura e Estilização
     - ✅ Conteúdo dinâmico por ID
     - Carrossel de imagens
+
+- Página de Atendimento
+    - Estrutura e Estilização

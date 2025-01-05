@@ -10,9 +10,9 @@ window.onload = function carregarPacote() {
     .then(data => {
         let pacote
         data.forEach((el) => {
-            if(el.id = id) pacote = el
+            if(el.id == id) pacote = el 
         })
-
+        console.log(pacote)
         nomeEl.innerText = pacote.nome
         descricaoEl.innerText = pacote.descricao
 

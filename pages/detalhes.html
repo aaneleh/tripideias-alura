@@ -13,7 +13,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="../styles/styles.css"/>
+    <link rel="stylesheet" href="../styles/pages.css"/>
     <title>TripIdeias</title>
   </head>
   <body>
@@ -109,7 +110,50 @@
             <img src="../assets/Lis1.png" alt="">
         </div>
         <p id="detalhes-descricao" class="detalhes-descricao"></p>
+        <div class="detalhes-hotel">
+          <img src="../assets/fantasminha.png" alt="">
+          <div class="detalhes-hotel-descricao">
+              <p>Hotel Ocean View</p>
+              <p>R$ 159,90 per noite</p>
+          </div>
+        </div>
+        <div class="detalhes-form">
+          <p>Quantos dias planeja ficar na cidade?</p>
+          <div class="input-group">
+            <input
+            type="number"
+            class="form-control"
+            placeholder="7 dias"
+            aria-label="quantidade de dias"
+            />
+          </div>
+        </div>
+        <div class="detalhes-form">
+          <p>Como será o transporte?</p>
+          <select class="form-select" aria-label="como gostaria do transporte">
+            <option value="rapido" selected>O mais rápido</option>
+            <option value="economico">O mais econômico</option>
+            <option value="confortável">O mais confortável</option>
+          </select>
+        </div>
+        <div class="detalhes-form">
+          <p>Gostaria de aproveitar os passeios da cidade</p>
+          <select class="form-select" aria-label="gostaria de aproveitar os passeios da cidade">
+            <option value="todos" selected>Todos</option>
+            <option value="melhores">Os melhores</option>
+            <option value="nenhum">Nenhum</option>
+          </select>
+        </div>
+        <button id="botao-form-detalhes" class="botao">Consultar Valor</button>
     </main>
+    <footer>
+      <div class="footer-wrapper maxWidth">
+        <a href="/">TripIdeias</a>
+        <a href="">        
+          <i class="bi bi-telephone-fill"></i>
+        </a>
+      </div>
+    </footer>
 
     <script src="../scripts/scripts.js"></script>
     <script src="../scripts/detalhes.js"></script>

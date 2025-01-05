@@ -81,23 +81,22 @@ function renderizarDialog(pacoteId){
                 <a id="detalhes-dialog-link" href="/pages/detalhes.html?id=${pacoteId}" class="botao">Ver Detalhes</a>
         `
         document.body.appendChild(dialog)
-        dialog.open = true;
+        setTimeout(()=> dialog.open = true, 100)
         const dialogFechar = document.querySelector('#detalhes-dialog .detalhes-voltar')
         dialogFechar.addEventListener('click', () => {
             dialog.close()
-            setTimeout(()=> dialog.remove(), 150)
+            setTimeout(()=> dialog.remove(), 100)
         })
     })
 }
-
 
 //TOGGLE SIDEBAR
 const sidebar = document.getElementById('sidebar')
 const botaoAbrirSidebar = document.getElementById('abrir-sidebar')
 botaoAbrirSidebar.addEventListener('click', () => sidebar.classList.add('aberta')) 
 
-//fecha sidebar em qualquer click em um elemento que não pertença a ela
 document.body.addEventListener('click', (e) => {
+    //fecha sidebar em qualquer click em um elemento que não pertença a ela
     if(e.target.id != 'sidebar'
     && e.target.parentNode.id != 'abrir-sidebar' 
     && e.target.parentNode.parentNode.parentNode.parentNode.id != 'sidebar')

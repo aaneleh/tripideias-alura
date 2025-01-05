@@ -1,13 +1,14 @@
 :root {
     --branco: #FAFAFA;
+    --branco-hover: #e4e4e4;
     --preto: #19191B; 
     --cinza: #999999;
     --sombra: #ececec;
     --amarelo: #FFD145; /*FFD145*/
     --amarelo-hover: hsl(45, 100%, 54%);
     --bg-servicos: #f3d886;
-    --bg-botao-voltar: #999999; 
-    --bg-botao-voltar-hover: #8a8989; 
+    --bg-botao-voltar: #d1d1d1; 
+    --bg-botao-voltar-hover: #afafaf; 
     --borda-input-focus: #525252;
 }
 
@@ -79,7 +80,6 @@ header {
 #sidebar.aberta {
     right: 0;
     transition: right 200ms ease;
-
 }
 #fechar-sidebar{
     position: absolute;
@@ -96,36 +96,47 @@ button {
     font-size: 1.5rem;
 }
 
-/***************HERO*****************/
-.hero {
-    background-image: url('./assets/Lis2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 390px;
-    background-attachment: fixed;
+.accordion-sem-seta.accordion-button::after{
+    visibility: hidden;
 }
-.hero-wrapper {
-    height: 100%;
-    max-width: 540px;
-        display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+.accordion-body, .accordion ul{
+    padding: 0;
 }
-.hero-input {
-    position: relative;
+.accordion li {
+    list-style-type: none;
+    line-height: 2.5rem;
+    margin-top: 0.25rem;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--branco);
+    transition: background-color 100ms;
+
 }
-.hero-input input {
-    border-radius: 8px !important;
+.accordion li:hover {
+    background-color: var(--branco-hover);
 }
-.hero-input input:focus {
+
+.accordion-item, .accordion-header,
+.accordion-button, .accordion-button:not(.collapsed),
+.accordion-button:focus  {
+    background-color: var(--branco);
+    width: 260px;
+    border:none;
     box-shadow: none;
-    border: 1px solid var(--borda-input-focus);
+    color: var(--preto);
+    font-weight: normal;
+
 }
-.hero-input .botao-pesquisar{
-    position: absolute;
-    right: 0;
-    z-index: 10;
+.accordion-header, .accordion-button,
+.accordion-button:not(.collapsed), .accordion-button:focus {
+    background: var(--bg-botao-voltar);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+.accordion-header:hover, .accordion-button:hover,
+.accordion-button:not(.collapsed):hover{
+    background: var(--bg-botao-voltar-hover);
 }
 
 /**********LISTAGEM CARDS********/
@@ -164,7 +175,6 @@ button {
     overflow: hidden; /*TODO testar/arrumar text truncate*/
 }
 
-
 .card-preco {
     display: flex;
     align-items: center;
@@ -196,57 +206,6 @@ button {
 .bookmark-icon.salvo {
     fill: var(--preto);
     fill-opacity: 1;
-}
-
-/***SERVIÇOS***/
-.servicos{
-    background: var(--bg-servicos);
-    padding: 2rem 0;
-    margin-bottom: 0;
-}
-.servicos-intro {
-    display: grid;
-    row-gap: 1rem;
-}
-.servicos-lista {
-    padding: 2rem;
-    display: grid;
-    row-gap: 1rem;
-    list-style: none;
-}
-.servicos-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 100%;
-}
-.servicos-item {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.servicos-item-titulo {
-    font-weight: 600;
-    font-size: 1.12rem;
-}
-
-/***CALLTOACTION***/
-.calltoaction {
-    display: grid;
-    row-gap: 2rem;
-    max-width: 540px;
-    padding: 4rem 2rem;
-}
-.calltoaction .botao-pesquisar {
-    justify-self: center;
-    font-size: 1.12rem;
-}
-.calltoaction input {
-    border-radius: 8px !important;
-}
-.calltoaction input:focus {
-    box-shadow: none;
-    border: 1px solid var(--borda-input-focus);
 }
 
 /*FOOTER*/
@@ -297,13 +256,16 @@ footer {
     left:0;
     z-index: 15;
     transition: top 150ms;
+    border: 1px solid var(--cinza);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0.25rem var(--cinza);
 }
 #detalhes-dialog[open]{
     top: 15%;
     transition: top 150ms;
 }
-#detalhes-dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+body:has(#detalhes-dialog[open]) main, body:has(#detalhes-dialog[open]) header{
+    filter: blur(1px);
 }
 #detalhes-dialog .botao {
     align-self: center;
@@ -319,42 +281,4 @@ footer {
 }
 .detalhes-voltar i{
     font-size: 1.5rem;
-}
-
-/*PAGINA DE DETALHES*/ 
-.detalhes {
-    padding-top: 6rem;
-}
-
-/**PAGINA DE BUSCA**/
-.breadcrumb {
-    padding: 4rem 2rem 2rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-.breadcrumb a{
-    font-size: 1.5rem;
-}
-.breadcrumb p {
-    margin-bottom: 0;
-}
-.breadcrumb span {
-    font-weight: bold;
-}
-.pesquisa-input input {
-    border-radius: 8px !important;
-}
-.pesquisa-input input:focus {
-    box-shadow: none;
-    border: 1px solid var(--borda-input-focus);
-}
-#resultados {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-#resultados .pacote-card {
-    min-width: 240px;
 }
