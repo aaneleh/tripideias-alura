@@ -12,7 +12,7 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
     - ✅ Interações
     - ✅ Exibir "dinâmicamente" pacotes
     - Links e estilo sidebar 
-    - Funcionalidade salvar pacotes
+    - ❓ Funcionalidade salvar pacotes 
 
 - ✅ Página de pesquisa
     - ✅ Estrutura e Estilização
@@ -21,4 +21,5 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
 
 - Página de detalhes do pacote
     - Estrutura e Estilização
-    - Conteúdo dinâmico por ID
+    - ✅ Conteúdo dinâmico por ID
+    - Carrossel de imagens

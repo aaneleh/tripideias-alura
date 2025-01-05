@@ -17,13 +17,13 @@ function buscar(busca) {
 }
 
 /**
- * Função que cria elementos da lista passada no formato de cards e então adiciona ao elemento pai informado
+ * Cria elementos da lista passada no formato de cards e então adiciona ao elemento pai informado
  * @param {Array} lista lista de objetos com nome, precoAtual, precoNormal
  * @param {Element} parent elemento pai onde serão adicionados os cards
  */
 function renderizarCards(lista, parent){
     if(lista.length){
-        let card;
+        let card
         lista.forEach((el) => {
             card = document.createElement("div")
             card.classList.add('pacote-card')
@@ -40,7 +40,7 @@ function renderizarCards(lista, parent){
                         <span class="card-preco-promocao">R$ ${el.precoAtual}</span>
                         <span class="card-preco-normal">R$ ${el.precoNormal}</span>
                     </p>
-                    <a href="" class="botao card-botao">Ver Detalhes</a>
+                    <button class="botao card-botao" onClick=renderizarDialog(${el.id})>Ver Detalhes<button/>
                 </div>
             `
             parent.appendChild(card)
@@ -51,6 +51,45 @@ function renderizarCards(lista, parent){
         parent.appendChild(mensagemErro)
     }
 }
+
+/**
+ * Cria um dialog, por default como open e append ao body
+ * @param {number} pacoteId id do pacote para que seja feito o fetch do nome e descrição
+ */
+function renderizarDialog(pacoteId){
+    let pacote
+
+    fetch("data/pacotes.json")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach((el) => {
+            if(el.id == pacoteId) pacote = el
+        })
+
+        const dialog = document.createElement('dialog')
+        dialog.id = 'detalhes-dialog'
+        dialog.innerHTML = `
+                <div class="detalhes-voltar">
+                    <i class="bi bi-arrow-left-short"></i>
+                    <p>Voltar</p>
+                </div>
+                <h3>${pacote.nome}</h3>
+                <div class="detalhes-img">
+                    <img src="./assets/Lis1.png" alt="">
+                </div>
+                <p class="detalhes-descricao">${pacote.descricao}</p>
+                <a id="detalhes-dialog-link" href="/pages/detalhes.html?id=${pacoteId}" class="botao">Ver Detalhes</a>
+        `
+        document.body.appendChild(dialog)
+        dialog.open = true;
+        const dialogFechar = document.querySelector('#detalhes-dialog .detalhes-voltar')
+        dialogFechar.addEventListener('click', () => {
+            dialog.close()
+            setTimeout(()=> dialog.remove(), 150)
+        })
+    })
+}
+
 
 //TOGGLE SIDEBAR
 const sidebar = document.getElementById('sidebar')

@@ -23,6 +23,7 @@ html{
     border-radius: 4px;
     padding: 8px 16px;
     transition: background 100ms;
+    font-size: 1rem;
 }
 .botao:hover{
     background: var(--amarelo-hover);
@@ -285,6 +286,46 @@ footer {
     bottom: 6rem;
 }
 
+/*DIALOG DETALHES*/
+#detalhes-dialog {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: fixed;
+    top: 100%;
+    left:0;
+    z-index: 15;
+    transition: top 150ms;
+}
+#detalhes-dialog[open]{
+    top: 15%;
+    transition: top 150ms;
+}
+#detalhes-dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+}
+#detalhes-dialog .botao {
+    align-self: center;
+}
+.detalhes-voltar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+.detalhes-voltar p {
+    margin-bottom: 0;
+}
+.detalhes-voltar i{
+    font-size: 1.5rem;
+}
+
+/*PAGINA DE DETALHES*/ 
+.detalhes {
+    padding-top: 6rem;
+}
+
 /**PAGINA DE BUSCA**/
 .breadcrumb {
     padding: 4rem 2rem 2rem;
@@ -296,7 +337,7 @@ footer {
     font-size: 1.5rem;
 }
 .breadcrumb p {
-    margin-bottom: 0; /*nem ideia do porque tinha uma margem nisso antes*/
+    margin-bottom: 0;
 }
 .breadcrumb span {
     font-weight: bold;
