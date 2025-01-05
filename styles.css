@@ -284,3 +284,36 @@ footer {
     opacity: 1;
     bottom: 6rem;
 }
+
+/**PAGINA DE BUSCA**/
+.breadcrumb {
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.breadcrumb a{
+    font-size: 1.5rem;
+}
+.breadcrumb p {
+    margin-bottom: 0; /*nem ideia do porque tinha uma margem nisso antes*/
+}
+.breadcrumb span {
+    font-weight: bold;
+}
+.pesquisa-input input {
+    border-radius: 8px !important;
+}
+.pesquisa-input input:focus {
+    box-shadow: none;
+    border: 1px solid var(--borda-input-focus);
+}
+#resultados {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#resultados .pacote-card {
+    min-width: 240px;
+}
