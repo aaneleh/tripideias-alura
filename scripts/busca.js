@@ -1,8 +1,16 @@
 //FETCH JSON E RENDERIZA OS QUE FOREM RESULTADOS OK
 const urlParams = new URLSearchParams(window.location.search);
 const busca = urlParams.get('busca')
+const checkPromocao = urlParams.get('promocao')=='true'
+const checkSalvo = urlParams.get('salvo') =='true'
+
 const buscaAtualSpan = document.getElementById('busca-atual')
+const inputCheckPromocao = document.getElementById('check-promocao')
+const inputCheckSalvo = document.getElementById('check-salvos')
+
 buscaAtualSpan.innerText = busca
+inputCheckPromocao.checked = checkPromocao
+inputCheckSalvo.checked = checkSalvo
 
 window.onload = function carregarPacotes() {
     fetch("../data/pacotes.json")
@@ -10,7 +18,8 @@ window.onload = function carregarPacotes() {
     .then(data => {
         let resultados = []
         data.forEach((el) => {
-            if(el.nome.toUpperCase().includes(busca.toUpperCase())) {
+            if((el.nome.toUpperCase().includes(busca.toUpperCase()) || busca == '') &&
+            (!checkPromocao || el.precoAtual < el.precoNormal) ) {
                 resultados.push(el)
             }
         })
@@ -24,3 +33,19 @@ inputNovaPesquisa.addEventListener('keypress', (e) => enterInput(e, inputNovaPes
 
 const botaoNovaPesquisa = document.getElementById('botao-pesquisar-nova-pesquisa')
 botaoNovaPesquisa.addEventListener('click', () => buscar(inputNovaPesquisa.value))
+
+//TOGGLE FILTROS
+const filtroEl = document.getElementById('filtro')
+const botaoFiltro = document.getElementById('botao-filtro')
+botaoFiltro.addEventListener('click', ()=> filtroEl.classList.toggle('active'))
+
+//EVENT LISTENERS FILTROS
+function buscaComFiltros(){
+    buscar(
+        inputNovaPesquisa.value != '' ? inputNovaPesquisa.value : busca,
+        inputCheckPromocao.checked,
+        inputCheckSalvo.checked
+    )
+}
+inputCheckPromocao.addEventListener('change', () => buscaComFiltros())
+inputCheckSalvo.addEventListener('change', () => buscaComFiltros())

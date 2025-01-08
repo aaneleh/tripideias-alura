@@ -151,3 +151,44 @@
 #resultados .pacote-card {
     min-width: 240px;
 }
+.filtro-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 0.5rem 0;
+    max-width: calc(932px - 4rem);
+    place-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid  rgb(226, 226, 226);
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+#botao-filtro{
+    display: flex;
+    align-items: center;
+
+}
+#botao-filtro svg{
+    fill: none;
+    stroke: var(--preto);
+    stroke: 1;
+
+}
+
+.busca:has(#filtro.active) #botao-filtro svg{
+    fill: var(--preto);
+}
+
+
+#filtro.active{
+    opacity: 1;
+    height: 40px;
+    transition: all 100ms;
+}
+#filtro{
+    opacity: 0;
+    height: 0;
+    transition: all 100ms;
+}

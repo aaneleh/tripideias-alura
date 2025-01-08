@@ -4,13 +4,13 @@ const inputHero = document.getElementById('input-pesquisar-hero')
 inputHero.addEventListener('keypress', (e) => enterInput(e, inputHero.value))
 
 const botaoHero = document.getElementById('botao-pesquisar-hero')
-botaoHero.addEventListener('click', () => buscar(inputHero.value))
+botaoHero.addEventListener('click', () => buscar(inputHero.value,false,false))
 
 const inputCall = document.getElementById('input-pesquisar-calltoaction')
 inputCall.addEventListener('keypress', (e) => enterInput(e, inputCall.value))
 
 const botaoCall = document.getElementById('botao-pesquisar-calltoaction')
-botaoCall.addEventListener('click', () => buscar(inputCall.value))
+botaoCall.addEventListener('click', () => buscar(inputCall.value,false,false))
 
 //BOTAO VOLTAR PRO TOPO DA PÁGINA
 const botaoVoltar = document.getElementById('voltar-topo')

@@ -4,14 +4,16 @@
  * @param {string} value valor que será pesquisado
  */
 function enterInput(e, value){
-    if(e.code == 'Enter') buscar(value)
+    if(e.code == 'Enter') buscar(value, false, false)
 }
 /** Função para ser usada no elemento que ativará a busca, como um botão
  *  @param {string} busca o valor que será pesquisado
+ *  @param {boolean} promocao irá filtrar os resultados entre os em promocao ou não filtrar
+ *  @param {boolean} salvo irá filtrar os resultados entre os salvos ou não filtrar
  */
-function buscar(busca) {
+function buscar(busca, promocao, salvo) {
     if(busca != ''){
-        window.location = "/pages/busca.html?busca="+busca
+        window.location = "/pages/busca.html?busca="+busca+"&promocao="+promocao+"&salvo="+salvo
     } else 
         alert("Preencha seu destino!") //todo modal top
 }
@@ -24,9 +26,19 @@ function buscar(busca) {
 function renderizarCards(lista, parent){
     if(lista.length){
         let card
+        let preco
         lista.forEach((el) => {
             card = document.createElement("div")
             card.classList.add('pacote-card')
+            
+            if(el.precoAtual < el.precoNormal) {
+                preco = `<span class="card-preco-promocao">R$ ${el.precoAtual}</span>
+                <span class="card-preco-normal">R$ ${el.precoNormal}</span>
+                `
+            } else {
+                preco = `<span class="card-preco-promocao">R$ ${el.precoAtual}</span>
+                `
+            }
             card.innerHTML = `
                 <div class="img-container">
                     <img src="/assets/Lis1.png" alt="" />
@@ -37,8 +49,7 @@ function renderizarCards(lista, parent){
                 <div class="pacote-card-desc">
                     <p class="card-titulo">${el.nome}</p>
                     <p class="card-preco">
-                        <span class="card-preco-promocao">R$ ${el.precoAtual}</span>
-                        <span class="card-preco-normal">R$ ${el.precoNormal}</span>
+                        ${preco}
                     </p>
                     <button class="botao card-botao" onClick=renderizarDialog(${el.id})>Ver Detalhes<button/>
                 </div>
