@@ -30,5 +30,6 @@ window.onload = function carregarPacotes() {
         })
         renderizarCards(promocoes, document.getElementById('promocoes'))
         renderizarCards(populares, document.getElementById('populares'))
+        adicionarEventosSalvar()
     })
 }

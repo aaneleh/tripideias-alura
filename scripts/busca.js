@@ -13,17 +13,24 @@ inputCheckPromocao.checked = checkPromocao
 inputCheckSalvo.checked = checkSalvo
 
 window.onload = function carregarPacotes() {
+    let pacotesSalvos
+    if(localStorage.getItem('salvos') == '' || localStorage.getItem('salvos') == null){
+        pacotesSalvos = []
+    } else pacotesSalvos = JSON.parse(JSON.stringify(localStorage.getItem('salvos')))
+
     fetch("../data/pacotes.json")
     .then(res => res.json())
     .then(data => {
         let resultados = []
         data.forEach((el) => {
             if((el.nome.toUpperCase().includes(busca.toUpperCase()) || busca == '') &&
-            (!checkPromocao || el.precoAtual < el.precoNormal) ) {
+            (!checkPromocao || el.precoAtual < el.precoNormal)  &&
+            (!checkSalvo || pacotesSalvos.includes(el.id)) ){
                 resultados.push(el)
             }
         })
         renderizarCards(resultados, document.getElementById('resultados'))
+        adicionarEventosSalvar()
     })
 }
 

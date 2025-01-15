@@ -6,6 +6,7 @@
 function enterInput(e, value){
     if(e.code == 'Enter') buscar(value, false, false)
 }
+
 /** Função para ser usada no elemento que ativará a busca, como um botão
  *  @param {string} busca o valor que será pesquisado
  *  @param {boolean} promocao irá filtrar os resultados entre os em promocao ou não filtrar
@@ -24,13 +25,21 @@ function buscar(busca, promocao, salvo) {
  * @param {Element} parent elemento pai onde serão adicionados os cards
  */
 function renderizarCards(lista, parent){
+
+    let pacotesSalvos
+    if(localStorage.getItem('salvos') == '' || localStorage.getItem('salvos') == null){
+        pacotesSalvos = []
+    } else {
+        pacotesSalvos = JSON.parse(JSON.stringify(localStorage.getItem('salvos')))
+    }
+
     if(lista.length){
         let card
         let preco
         lista.forEach((el) => {
             card = document.createElement("div")
             card.classList.add('pacote-card')
-            
+
             if(el.precoAtual < el.precoNormal) {
                 preco = `<span class="card-preco-promocao">R$ ${el.precoAtual}</span>
                 <span class="card-preco-normal">R$ ${el.precoNormal}</span>
@@ -41,8 +50,8 @@ function renderizarCards(lista, parent){
             }
             card.innerHTML = `
                 <div class="img-container">
-                    <img src="/assets/Lis1.png" alt="" />
-                    <svg class="bookmark-icon salvo"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                    <img src="/assets/${el.imagem}" alt="" />
+                    <svg class="bookmark-icon ${pacotesSalvos.includes(el.id) ? "salvos" : ""}" data="${el.id}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
                     <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
                     </svg>
                 </div>
@@ -100,6 +109,51 @@ function renderizarDialog(pacoteId){
         })
     })
 }
+
+
+function adicionarEventosSalvar() {
+    const icones = document.querySelectorAll('.bookmark-icon')
+    let id,toggle, pacotesSalvos
+    if(localStorage.getItem('salvos') == '' || localStorage.getItem('salvos') == null){
+        pacotesSalvos = []
+    } else pacotesSalvos = JSON.parse(localStorage.getItem('salvos'))
+
+    icones.forEach((el) => {
+
+        el.addEventListener('click', () => {
+            id = el.getAttribute('data')
+            //Se salvo, retira dos salvos
+            if(pacotesSalvos.includes(id)) {
+                toggle = false
+                for(let i = 0; i<pacotesSalvos.length; i++)
+                    if(pacotesSalvos[i] == id){
+                        pacotesSalvos.splice(i, 1)
+                        el.classList.remove('salvos')
+                        break
+                    }
+            //Se não salvo, adiciona ao local storage
+            } else {
+                toggle = true
+                pacotesSalvos.push(id)
+                el.classList.add('salvos')
+            }
+
+            localStorage.setItem('salvos',JSON.stringify(pacotesSalvos))
+            console.log(pacotesSalvos)
+
+            //verifica se há outro com o mesmo id pra também modificar o ícone
+            icones.forEach((el) => {
+                if(el.getAttribute('data') == id){
+                    if(toggle) {
+                        el.classList.add('salvos')
+                    } else el.classList.remove('salvos')
+                }
+            })
+
+        })
+    })
+}
+
 
 //TOGGLE SIDEBAR
 const sidebar = document.getElementById('sidebar')
