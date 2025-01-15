@@ -4,6 +4,7 @@
     background-image: url('../assets/haven.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     height: 390px;
     background-attachment: fixed;
 }
