@@ -13,3 +13,6 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
 - Campos de busca e filtro para pesquisa de pacotes
 - Armazenamento local de informação de pacotes salvos
 
+![Screenshot da página inicial: header com o nome tripideia, hero com campo de busca "Para onde será sua viagem?" e lista de cards de pacotes "Em promoção"](home-page.png)
+![Screenshot da página de busca: campo escrito "buscar agora" com um botão para filtros e busca ao lado e abaixo checkboxes para filtrar "em promoção" e "salvos" e então a listagem dos pacotes encontrados](search-page.png)
+
