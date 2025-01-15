@@ -1,7 +1,7 @@
 /***PAGINA INCIIAL***/
 /*HERO*/
 .hero {
-    background-image: url('../assets/Lis2.png');
+    background-image: url('../assets/haven.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 390px;
@@ -54,8 +54,9 @@
 }
 .servicos-item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
+
 }
 .servicos-item-titulo {
     font-weight: 600;

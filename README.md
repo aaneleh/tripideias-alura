@@ -6,24 +6,10 @@ O website foi construido em CSS e JS vanilas para mover o foco para a interface 
 
 ![Wireframe das telas de início pesquisa e detalhes](wireframe.png)
 
-### TODO
-- Página inicial
-    - ✅ Estrutura e Estilização
-    - ✅ Interações
-    - ✅ Exibir "dinâmicamente" pacotes
-    - ✅ Links e estilo sidebar 
-    - 🚧 Funcionalidade salvar pacotes (lista IDs no localStorage)
+## Funcionalidades
 
-- ✅ Página de pesquisa
-    - ✅ Estrutura e Estilização
-    - ✅ Inputs de pesquisa redirecionar corretamente
-    - ✅ Resultado dinâmico dos pacotes 
-    - ✅ Filtros de pesquisa (em promoção)
-    - 🚧 Adicionar filtro pacotes salvos
+- Listagem dinâmica de todos os pacotes
+- Site responsivo
+- Campos de busca e filtro para pesquisa de pacotes
+- Armazenamento local de informação de pacotes salvos
 
-- Página de detalhes do pacote
-    - ✅ Estrutura e Estilização
-    - ✅ Conteúdo dinâmico por ID
-
-- Página de Atendimento
-    - 🚧 Estrutura e Estilização

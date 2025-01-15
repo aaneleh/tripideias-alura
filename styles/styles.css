@@ -150,14 +150,14 @@ button {
     flex-wrap: wrap;
 }
 .pacote-card{
-    width: 180px;
+    width: 240px;
     background: var(--branco);
     padding: 1rem;
     border-radius: 0.5rem;
     transition: background 200ms;
 }
 .promocoes-wrapper .pacote-card {
-    min-width: 240px;
+    min-width: 300px;
 }
 .pacote-card:hover{
     background: var(--sombra);
@@ -171,8 +171,8 @@ button {
     align-self: center;
 }
 .pacote-card .card-titulo {
-    height: 3rem;
-    overflow: hidden; /*TODO testar/arrumar text truncate*/
+    height: 2rem;
+    overflow: hidden;
 }
 
 .card-preco {
@@ -203,8 +203,7 @@ button {
 .bookmark-icon:hover {
     fill-opacity: 0.5;
 }
-.bookmark-icon.salvo {
-    fill: var(--preto);
+.bookmark-icon.salvos {
     fill-opacity: 1;
 }
 

@@ -4,27 +4,39 @@
         "nome": "Santo Antônio da Patrulha",
         "precoAtual": 150,
         "precoNormal": 300,
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium."
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium.",
+        "imagem": "santo-antonio.jpg"
     },
     { 
         "id": 1,
-        "nome": "BC",
+        "nome": "Torres",
         "precoAtual": 350,
         "precoNormal": 500,
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium."
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium.",
+        "imagem": "torres.jpg"
     },
     { 
         "id": 2,
         "nome": "Bombinhas",
         "precoAtual": 400,
         "precoNormal": 400,
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium."
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium.",
+        "imagem": "bombinhas.jpg"
     },
     { 
         "id": 3,
-        "nome": "Capão da Canoa",
+        "nome": "Itaimbezinho",
         "precoAtual": 200,
         "precoNormal": 200,
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium."
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium.",
+        "imagem": "itaimbezinho.jpg"
+    },
+    { 
+        "id": 4,
+        "nome": "Foz do Iguaçu",
+        "precoAtual": 450,
+        "precoNormal": 450,
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aspernatur porro unde impedit, hic laborum quidem ullam est temporibus minus quam obcaecati facilis aliquid error vitae quis eligendi incidunt. Beatae. Suscipit facere dicta sed mollitia voluptates, sit assumenda possimus? Non impedit dolores doloremque suscipit nesciunt nemo neque praesentium fuga inventore dolore hic natus tenetur dolor temporibus quidem, tempore laudantium! Laudantium.",
+        "imagem": "foz-do-iguacu.jpg"
     }
 ]
